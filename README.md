@@ -17,20 +17,20 @@ yay -S google-cloud-sdk google-cloud-sdk-gke-gcloud-auth-plugin
 - Login to gcloud
 
 ```
-gcloud config set account $GOOGLE-USER
+gcloud config set account $GOOGLE_USER
 gcloud auth login
 ```
 - Connect kubectl to existing gke cluster
 
 ```
-gcloud container clusters get-credentials $GCP-CLUSTER --region $GCP-REGION --project $GCP-PROJECT
+gcloud container clusters get-credentials $GCP_CLUSTER --region $GCP_REGION --project $GCP_PROJECT
 ```
 - Or create new cluster with gcloud
 
 ```
 gcloud services enable container.googleapis.com
-gcloud config set compute/region $GCP-REGION
-gcloud container clusters create-auto $GCP-CLUSTER
+gcloud config set compute/region $GCP_REGION
+gcloud container clusters create-auto $GCP_CLUSTER
 ```
 ## Usage
 
@@ -39,3 +39,7 @@ gcloud container clusters create-auto $GCP-CLUSTER
 - apply files with envsubst (ex. ``envsubst < namespace.yml | kubectl apply -f -``)
 
 ## Thanks for repo https://github.com/erickeloi/Kubernetes-Wordpress-Compass
+
+## Change pv reclaim policy: https://kubernetes.io/docs/tasks/administer-cluster/change-pv-reclaim-policy/
+
+no changes
