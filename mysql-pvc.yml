@@ -4,7 +4,7 @@ metadata:
   name: mysql-pvc
   labels:
     app: wordpress
-  namespace: ${PROJECT_NS}  
+  namespace: ${PROJECT_NS}
 spec:
   accessModes:
     - ReadWriteOnce
