@@ -2,6 +2,28 @@
 
 ## Setup
 
+### create .env file with vars
+
+```
+# gcloud
+export GOOGLE_USER="<value>"
+export GCP_CLUSTER="<value>"
+export GCP_PROJECT="<value>"
+export GCP_REGION="<value>"
+# kubernetes
+export PROJECT_NS="<value>"
+export STORAGE_CLASS="<value>"
+# wordpress & mysql 
+export WP_DB="<value>"
+export WP_USER="<value>"
+export MYSQL_ROOTPASS="<value converted base64>"
+export MYSQL_WPPASS="<value converted base64>"
+```
+and apply them:
+```
+source .env
+```
+
 ### to work with github using ssh-key
 
 ``git config --global url.git@github.com:.insteadOf https://github.com/``
